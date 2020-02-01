@@ -1,0 +1,28 @@
+---
+kind: pipeline
+type: docker
+name: build-pdf
+
+steps:
+- name: convert
+  image: ellerbrock/alpine-bash-curl-ssl
+  environment:
+    PASSWORD:
+      from_secret: file_password
+    USERNAME:
+      from_secret: file_username
+  commands:
+  - cd ./docs/markdown/
+  - ./../../.drone/convert.sh
+  when:
+    branch:
+    - master
+    - dc_drone_pdf
+- name: push commit
+  image: appleboy/drone-git-push
+  settings:
+    remote_name: origin
+    branch: master_pdf
+    commit: true
+    key: 
+      from_secret: deploy_key
