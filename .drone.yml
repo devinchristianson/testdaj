@@ -14,10 +14,6 @@ steps:
   commands:
   - cd ./docs/markdown/
   - ./../../.drone/convert.sh
-  when:
-    branch:
-    - master
-    - dc_drone_pdf
 - name: push commit
   image: appleboy/drone-git-push
   settings:
@@ -26,3 +22,7 @@ steps:
     commit: true
     key: 
       from_secret: deploy_key
+when:
+  branch:
+  - master
+  - dc_drone_pdf
