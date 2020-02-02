@@ -5,13 +5,15 @@ name: build-pdf
 
 steps:
 - name: convert
-  image: ellerbrock/alpine-bash-curl-ssl
+  image: alpine:latest 
   environment:
     PASSWORD:
       from_secret: file_password
     USERNAME:
       from_secret: file_username
   commands:
+  - apk add --no-cache curl bash
+  - /bin/sh
   - cd ./docs/markdown/
   - ./../../.drone/convert.sh
 - name: push commit
