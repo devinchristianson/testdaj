@@ -23,6 +23,7 @@ steps:
     branch: master_pdf
     commit: true
     commit_message: "[drone ci] push pdf docs"
+    force: true
     key: 
       from_secret: deploy_key
 when:
