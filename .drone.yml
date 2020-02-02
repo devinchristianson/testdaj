@@ -26,4 +26,6 @@ steps:
     force: true
     key: 
       from_secret: deploy_key
-branches: [ master ]
+trigger:
+  branch:
+  - master
