@@ -22,9 +22,9 @@ steps:
     remote_name: origin
     branch: master_pdf
     commit: true
+    commit_message: [drone ci] push pdf docs
     key: 
       from_secret: deploy_key
 when:
   branch:
   - master
-  - dc_drone_pdf
