@@ -20,7 +20,7 @@ steps:
   image: appleboy/drone-git-push
   settings:
     remote_name: origin
-    branch: master_pdf
+    branch: ${DRONE_BRANCH}_pdf
     commit: true
     commit_message: "[drone ci] push pdf docs"
     force: true
@@ -29,5 +29,6 @@ steps:
 trigger:
   branch:
   - master
+  - dc_drone_pdf
   event:
   - push
