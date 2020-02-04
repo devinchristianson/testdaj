@@ -32,7 +32,6 @@ services:
 trigger:
   branch:
   - master
-  - dc_drone_pdf
-  event:
-  - push
-  - promote
+  ref:
+    include:
+    - refs/pull/**
