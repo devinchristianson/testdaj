@@ -17,7 +17,7 @@ do
   </body>
  </html>" > index.html;
 echo "-u $USERNAME:$PASSWORD" | curl -K- --request POST \
-    --url https://file.dev.mdics.me/convert/markdown \
+    --url http://convert:3000/convert/markdown \
     --header 'Content-Type: multipart/form-data' \
     --form files=@index.html \
     --form files=@$f \

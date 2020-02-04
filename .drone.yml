@@ -26,6 +26,9 @@ steps:
     force: true
     key: 
       from_secret: deploy_key
+services:
+- name: convert
+  image: thecodingmachine/gotenberg:latest
 trigger:
   branch:
   - master
