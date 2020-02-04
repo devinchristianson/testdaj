@@ -32,6 +32,6 @@ services:
 trigger:
   branch:
   - master
-  ref:
-    include:
-    - refs/pull/**
+  event:
+    exclude:
+    - pull_request
