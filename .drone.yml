@@ -4,32 +4,28 @@ type: docker
 name: default
 
 steps:
-- name: convert
-  image: alpine:latest 
-  environment:
-    PASSWORD:
-      from_secret: file_password
-    USERNAME:
-      from_secret: file_username
-  commands:
-  - apk add --no-cache curl bash
-  - /bin/sh
-  - cd ./docs/markdown/
-  - ./../../.drone/convert.sh
-- name: commit push pdfs
-  image: appleboy/drone-git-push
-  settings:
-    remote_name: origin
-    branch: ${DRONE_BRANCH}_pdf
-    commit: true
-    commit_message: "[CI SKIP] push pdf docs"
-    force: true
-    key: 
-      from_secret: deploy_key
+  - name: convert pdf script
+    image: alpine:latest 
+    commands:
+    - apk add --no-cache curl bash
+    - /bin/sh
+    - cd ./docs/markdown/
+    - ./../../.drone/convert.sh
+  - name: commit push pdfs
+    image: appleboy/drone-git-push
+    settings:
+      remote_name: origin
+      branch: ${DRONE_BRANCH}_pdf
+      commit: true
+      commit_message: "[CI SKIP] push pdf docs"
+      force: true
+      key: 
+        from_secret: deploy_key
 services:
-- name: convert
-  image: thecodingmachine/gotenberg:latest
-#trigger:
-#  branch:
-#  - master
-#  - testbranch
+  - name: convert
+    image: thecodingmachine/gotenberg:latest
+trigger:
+  branch:
+  - master
+  event:
+  - push
