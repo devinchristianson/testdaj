@@ -16,7 +16,7 @@ do
     {{ toHTML .DirPath \"$f\" }}
   </body>
  </html>" > index.html;
-echo "-u $USERNAME:$PASSWORD" | curl -K- --request POST \
+curl --request POST \
     --url http://convert:3000/convert/markdown \
     --header 'Content-Type: multipart/form-data' \
     --form files=@index.html \
