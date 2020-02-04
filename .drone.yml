@@ -35,3 +35,4 @@ trigger:
   - dc_drone_pdf
   event:
   - push
+  - promote
