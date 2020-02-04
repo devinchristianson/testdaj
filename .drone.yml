@@ -29,8 +29,3 @@ steps:
 services:
 - name: convert
   image: thecodingmachine/gotenberg:latest
-trigger:
-  branch:
-  - master
-  event:
-  - push
