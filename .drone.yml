@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: convert pdfs
+name: default
 
 steps:
 - name: convert
@@ -29,5 +29,3 @@ steps:
 services:
 - name: convert
   image: thecodingmachine/gotenberg:latest
-trigger:
-  branch: *
