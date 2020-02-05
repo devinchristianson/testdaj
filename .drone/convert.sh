@@ -1,5 +1,6 @@
 #!/bin/bash
 mkdir -p ../pdf;
+rm ../pdf/*
 shopt -s nullglob;
 for f in *.md
 do
