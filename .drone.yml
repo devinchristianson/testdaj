@@ -15,7 +15,7 @@ steps:
     image: appleboy/drone-git-push
     settings:
       remote_name: origin
-      branch: master
+      branch: ${DRONE_BRANCH}
       commit: true
       commit_message: "[CI SKIP] push pdf docs"
       force: true
