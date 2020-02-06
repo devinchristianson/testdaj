@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: default
+name: convertpdfs
 
 steps:
   - name: convert pdf script
@@ -15,7 +15,7 @@ steps:
     image: appleboy/drone-git-push
     settings:
       remote_name: origin
-      branch: ${DRONE_BRANCH}_pdf
+      branch: master
       commit: true
       commit_message: "[CI SKIP] push pdf docs"
       force: true
