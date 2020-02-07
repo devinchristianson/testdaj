@@ -26,4 +26,18 @@ As a busy musician, I need the web application scale well on mobile devices, so 
 
 As a beginner in music theory, I need to be able to select different clefs to display the ledger lines with, so that I can learn to recognize the chords in any clef.
 
+As a music teacher, I need to be able to share what I have done with students because of/so that I can use this app in my classroom.
+
+As a person who would like to make songs, I need to ba able to mix and match multiple instrument types together so that I can see what combinations sound good.
+
+As a user of polychord, I need to have an option to report bugs so that I can help you to improve the application as I use it.
+
+As an amateur musician, I need to have sight reading exercises so that I can improve as a musician.
+
+As a person who enjoys music, I need to be able to look at what songs have the chord progressions I am looking at so that I can find music that I will enjoy.
+
+As a person trying to practice perfect pitch, I need to have an option to listen to a chord and try to identify it so that I can improve my musical hearing.
+  
+As an amateur musician, I need to be able to input MIDI files so that I can see their chord progressions.
+
 As a <user role>, I need to <feature needed> because of/so that <benefit>.
