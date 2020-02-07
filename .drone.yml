@@ -10,7 +10,7 @@ steps:
     - apk add --no-cache curl bash
     - /bin/sh
     - cd ./docs/markdown/
-    - sleep 30
+    - sleep 300
     - ./../../.drone/convert.sh
   - name: commit push pdfs
     image: appleboy/drone-git-push
