@@ -10,11 +10,11 @@ steps:
     - apk add --no-cache curl bash
     - /bin/sh
     - cd ./docs/markdown/
+    - sleep 15
     - ./../../.drone/convert.sh
   - name: commit push pdfs
     image: appleboy/drone-git-push
     settings:
-      remote_name: origin
       remote: git@github.com:devinchristianson/daj.git
       branch: ${DRONE_BRANCH}
       commit: true
