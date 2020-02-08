@@ -37,7 +37,25 @@ As an amateur musician, I need to have sight reading exercises so that I can imp
 As a person who enjoys music, I need to be able to look at what songs have the chord progressions I am looking at so that I can find music that I will enjoy.
 
 As a person trying to practice perfect pitch, I need to have an option to listen to a chord and try to identify it so that I can improve my musical hearing.
-  
+
 As an amateur musician, I need to be able to input MIDI files so that I can see their chord progressions.
+
+As a musician out of ideas, I need to be able to see potential chord progressions so that I can make new songs.
+
+As a new musician, I need to be able to see the names of chords I play that I didn't know the names of so I can learn more about them to see what they go with.
+
+As a musician who has read a lot of theory and is still struggling to write music, I need to be able to be able to see suggestions to better understand the theory and write songs.
+
+As a beginner musician who does not play the keyboard, I need to be able to see what notes I am playing on my midi instrument so I can learn the theory better.
+
+As a poor musician, I need to be able to play chords without the use of a midi instrument.
+
+As a musician who is bad at theory, I need to be able to see the tonic of the chord that I am playing so I can understand the theory. 
+
+As a musician who is having trouble learning the theory, I need to be able to see how I can correctly play a chord I might be playing wrong.
+
+As a poor musician without access to high end music software, I need to be able to play music without the use of expensive software.
+
+As a person with a bad computer, I need to be able to play music without using software that will be taxing on my computer.
 
 As a <user role>, I need to <feature needed> because of/so that <benefit>.
