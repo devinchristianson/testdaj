@@ -23,5 +23,10 @@ curl --request POST \
     --form files=@index.html \
     --form files=@$f \
     -o ../pdf/$FNAME.pdf;
+curlexit=$?
+if [ $curlexit -ne 0 ]
+then 
+exit $curlexit
+fi
 done
 rm index.html
