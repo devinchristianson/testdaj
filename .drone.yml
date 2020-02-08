@@ -12,7 +12,7 @@ steps:
     - cd ./docs/markdown/
     - sleep 65
     - ./../../.drone/convert.sh
-  - name: clone
+  - name: rm origin
     image: alpine/git
     commands:
     - git remote rm origin
