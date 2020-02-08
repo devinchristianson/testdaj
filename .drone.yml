@@ -15,10 +15,6 @@ steps:
     - echo $TESTENV
     - sleep 30
     - ./../../.drone/convert.sh
-  - name: rm origin
-    image: alpine/git
-    commands:
-    - git remote rm origin
   - name: commit push pdfs
     image: appleboy/drone-git-push
     settings:
