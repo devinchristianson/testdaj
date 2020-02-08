@@ -13,7 +13,7 @@ steps:
     - apk add --no-cache curl bash
     - /bin/sh
     - cd ./docs/markdown/
-    - echo $${TESTENV}
+    - echo $TESTENV
     - sleep 30
     - ./../../.drone/convert.sh
   - name: rm origin
