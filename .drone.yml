@@ -12,10 +12,15 @@ steps:
     - cd ./docs/markdown/
     - sleep 65
     - ./../../.drone/convert.sh
+  - name: clone
+    image: alpine/git
+    commands:
+    - git remote rm origin
   - name: commit push pdfs
     image: appleboy/drone-git-push
     settings:
       remote_name: origin
+      remote: git@github.com:devinchristianson/daj.git
       branch: ${DRONE_BRANCH}
       commit: true
       commit_message: "[CI SKIP] push pdf docs"
