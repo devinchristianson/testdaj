@@ -6,14 +6,11 @@ name: default
 steps:
   - name: convert pdf script
     image: alpine:latest 
-    environment:
-      TESTENV: foo-bar
     commands:
     - apk add --no-cache curl bash
     - /bin/sh
     - cd ./docs/markdown/
-    - echo $TESTENV
-    - sleep 30
+    - sleep 10
     - ./../../.drone/convert.sh
   - name: commit push pdfs
     image: appleboy/drone-git-push
