@@ -7,7 +7,7 @@ steps:
   - name: convert pdf script
     image: alpine:latest 
     commands:
-    - apk add --no-cache curl bash
+    - apk add --no-cache curl bash netcat-openbsd
     - /bin/sh
     - cd ./docs/markdown/
     - ./../../.drone/convert.sh
