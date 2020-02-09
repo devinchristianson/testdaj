@@ -1,4 +1,9 @@
 #!/bin/bash
+echo "Waiting on convert API"
+while ! nc -z convert 3000; do
+  sleep 0.1;
+done
+echo "convert API is up"
 mkdir -p ../pdf;
 rm ../pdf/*
 shopt -s nullglob;
