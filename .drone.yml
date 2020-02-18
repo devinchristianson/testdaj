@@ -15,16 +15,13 @@ steps:
     - git remote add origin git@github.com:devinchristianson/testdaj.git
   - name: commit push pdfs
     image: appleboy/drone-git-push
-    environment:
-      GIT_PUSH_SSH_KEY:
-        from_secret: deploy_key
     settings:
       remote_name: origin
       branch: ${DRONE_BRANCH}
       commit: true
       commit_message: "[CI SKIP] push pdf docs"
-      #key:
-      #from_secret: deploy_key
+      key:
+        from_secret: deploy_key
 services:
   - name: convert
     image: thecodingmachine/gotenberg:latest
