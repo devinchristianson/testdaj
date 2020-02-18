@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Waiting on convert API"
+echo "Waiting on convert PDF API"
 while ! nc -z convert 3000; do
   sleep 0.1;
 done
